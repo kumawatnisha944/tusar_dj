@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Booking</title>
+    <link rel="stylesheet" href="booknow.css">
+</head>
+<body>
+    <section class="booking">
+        <h2>Book Now</h2>
+        <form onsubmit="sendWhatsAppMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="address" placeholder="Your Address" required>
+            <input type="date" id="event_date" required>
+            <textarea id="message" placeholder="Event details..." required></textarea>
+            <button type="submit">Send Booking Request</button>
+        </form>
+    </section>
+
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let address = document.getElementById("address").value;
+            let eventDate = document.getElementById("event_date").value;
+            let message = document.getElementById("message").value;
+
+            let whatsappNumber = "7340463221"; 
+            let whatsappMessage = `Hello, I want to book a DJ.\n\nName: ${name}\nAddress: ${address}\nEvent Date: ${eventDate}\nDetails: ${message}`;
+            
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+</body>
+</html>

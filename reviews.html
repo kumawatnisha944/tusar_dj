@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Reviews & Ratings</title>
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+    <section class="reviews">
+        <h2>⭐ Customer Reviews</h2>
+        <div id="reviews-list"></div>
+        <h3>Leave a Review</h3>
+        <form onsubmit="addReview(event)">
+            <input type="text" id="reviewer-name" placeholder="Your Name" required>
+            <textarea id="review-text" placeholder="Write your review..." required></textarea>
+            <div class="rating">
+                <span onclick="setRating(1)">&#9733;</span>
+                <span onclick="setRating(2)">&#9733;</span>
+                <span onclick="setRating(3)">&#9733;</span>
+                <span onclick="setRating(4)">&#9733;</span>
+                <span onclick="setRating(5)">&#9733;</span>
+            </div>
+            <input type="hidden" id="review-rating" value="0">
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+    <script src="reviews.js"></script>
+</body>
+</html>
