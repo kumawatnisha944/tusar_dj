@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b, #1e90ff);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 24px;
+}
+.about img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+.contact, .videos, .social, .booking, .reviews {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+}
+button {
+    background: yellow;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+footer {
+    background: black;
+    padding: 10px;
+    margin-top: 20px;
+}
